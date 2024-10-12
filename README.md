@@ -20,7 +20,7 @@
 10. [Usage](#usage)
 
 ## Introduction
-This project analyzes car data from 2005, focusing on various characteristics to explore relationships with car prices. The analysis includes data manipulation, exploratory data analysis (EDA), and regression modeling.
+This project analyzes car data from 2005, focusing on various characteristics to explore relationships with car prices. The analysis includes data manipulation, exploratory data analysis (EDA), and 2 stage regression modeling.
 
 ## Requirements
 - Python 3.x
