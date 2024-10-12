@@ -53,7 +53,10 @@ Obtain summary statistics to understand data distribution.
 - Generate bar plots for quantity sold by car category.
 - Use scatter plots to explore relationships between price and quantity.
 
-<img src="https://github.com/RoryQo/Demand-Estimation-Project/raw/main/Graph1.jpg" alt="Graph" style="width: 400px;"/>
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/RoryQo/Demand-Estimation-Project/raw/main/Graph1.jpg" alt="Graph 1" style="width: 400px;"/>
+    <img src="https://github.com/RoryQo/Demand-Estimation-Project/raw/main/graph2.jpg" alt="Graph 2" style="width: 400px;"/>
+</div>
 
 
 ## Modeling
