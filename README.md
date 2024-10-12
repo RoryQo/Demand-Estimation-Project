@@ -64,6 +64,10 @@ Obtain summary statistics to understand data distribution.
 ### First Stage Regression
 Conduct a regression analysis to predict car prices based on selected features.
 
+```
+firstStageV1 = smf.ols(formula='Price ~   hp + mpg_combined + footprint + hpDist + mpg_combinedDist + footprintDist',data=df).fit(cov_type='HC1')
+```
+
 ### Second Stage Regression
 Use predicted prices from the first stage as a predictor in the second regression analysis, including additional categorical variables.
 
