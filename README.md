@@ -14,13 +14,11 @@
 6. [Modeling](#modeling)
    - [First Stage Regression](#first-stage-regression)
    - [Second Stage Regression](#second-stage-regression)
-7. [Results](#results)
-8. [Conclusion](#conclusion)
-9. [Future Work](#future-work)
-10. [Usage](#usage)
+7. [Future Work](#future-work)
+8. [Results Analysis](#results-analysis)
 
 ## Introduction
-This project analyzes car data from 2005, focusing on various characteristics to explore relationships with car prices. The analysis includes data manipulation, exploratory data analysis (EDA), and 2 stage regression modeling.
+This project analyzes car data from 2005, focusing on various characteristics to explore relationships with car prices. The analysis includes data manipulation, exploratory data analysis (EDA), and regression modeling.
 
 ## Requirements
 - Python 3.x
@@ -65,39 +63,29 @@ Obtain summary statistics to understand data distribution.
 Conduct a regression analysis to predict car prices based on selected features.
 
 ### Second Stage Regression
-Use predicted prices from the first stage as a predictor in the second regression analysis, including additional categorical variables.
-
-## Results
-The regression results provide insights into how various factors influence car prices, indicating significant relationships between features like horsepower, fuel economy, and car categories.
-
-## Conclusion
-The analysis revealed key predictors of car prices and demonstrated the importance of considering multiple features in pricing models.
+The original regression equation is estimated, replacing the endogenous variable with its predicted values from the first stage. This helps to provide a more accurate estimate of the coefficients since the endogeneity issue has been addressed.
 
 ## Future Work
 - Explore additional features or models to enhance prediction accuracy.
 - Analyze trends over time using a larger dataset.
 - Investigate the impact of external factors, such as economic conditions, on car pricing.
 
-## Usage
+## Results Analysis
+The two-stage regression approach provided valuable insights into the factors affecting car prices:
 
-To utilize the code for data analysis and modeling, follow the steps below:
+1. **First Stage Regression Results:**
+   - The Adjusted R-squared of approximately 0.58 indicates that about 58% of the variability in car prices can be explained by the model, suggesting some predictive power but room for improvement.
 
-### A. Import Required Libraries
-Ensure you have the necessary libraries installed, such as Pandas, NumPy, Matplotlib, and Statsmodels.
+2. **Second Stage Regression Results:**
+   - The Adjusted R-squared increased to around 0.63, indicating an improvement in the model's explanatory power. This suggests that additional variables contribute to explaining more of the variation in car prices.
 
-### B. Load the Data
-Load your dataset into a Pandas DataFrame to begin analysis.
+### Key Insights:
+- **Impact of Features:** 
+  - A negative coefficient for combined MPG suggests higher fuel efficiency may be associated with lower prices, which could warrant further investigation.
+  - Statistical significance (p-values) highlights which variables meaningfully relate to car prices.
 
-### C. Data Exploration
-Explore the structure of the DataFrame to understand the number of observations and columns.
+- **Interpreting Coefficients:**
+  - Each coefficient reflects the expected change in car price for a one-unit increase in the predictor variable, holding others constant.
 
-### D. Data Processing and Feature Engineering
-Add new features and categories based on the existing data, using functions and mappings as needed.
-
-### E. Regression Modeling
-Conduct regression analyses to predict car prices, starting with the first stage regression.
-
-### F. Second Stage Regression
-Use the predicted prices from the first stage in a second regression analysis.
-
-This code provides a foundational approach to analyzing car pricing based on various features. You can modify the features or models as needed to enhance prediction accuracy.
+### Conclusion:
+The two-stage regression results illuminate key predictors of car prices while addressing endogeneity, reflecting the importance of incorporating predicted values to enhance model performance.
