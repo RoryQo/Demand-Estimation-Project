@@ -17,6 +17,7 @@
 7. [Results](#results)
 8. [Conclusion](#conclusion)
 9. [Future Work](#future-work)
+10. [Usage](#usage)
 
 ## Introduction
 This project analyzes car data from 2005, focusing on various characteristics to explore relationships with car prices. The analysis includes data manipulation, exploratory data analysis (EDA), and regression modeling.
@@ -58,15 +59,10 @@ Obtain summary statistics to understand data distribution.
     <img src="https://github.com/RoryQo/Demand-Estimation-Project/raw/main/graph2.jpg" alt="Graph 2" style="width: 400px;"/>
 </div>
 
-
 ## Modeling
 
 ### First Stage Regression
 Conduct a regression analysis to predict car prices based on selected features.
-
-```
-firstStageV1 = smf.ols(formula='Price ~   hp + mpg_combined + footprint + hpDist + mpg_combinedDist + footprintDist',data=df).fit(cov_type='HC1')
-```
 
 ### Second Stage Regression
 Use predicted prices from the first stage as a predictor in the second regression analysis, including additional categorical variables.
@@ -81,3 +77,27 @@ The analysis revealed key predictors of car prices and demonstrated the importan
 - Explore additional features or models to enhance prediction accuracy.
 - Analyze trends over time using a larger dataset.
 - Investigate the impact of external factors, such as economic conditions, on car pricing.
+
+## Usage
+
+To utilize the code for data analysis and modeling, follow the steps below:
+
+### A. Import Required Libraries
+Ensure you have the necessary libraries installed, such as Pandas, NumPy, Matplotlib, and Statsmodels.
+
+### B. Load the Data
+Load your dataset into a Pandas DataFrame to begin analysis.
+
+### C. Data Exploration
+Explore the structure of the DataFrame to understand the number of observations and columns.
+
+### D. Data Processing and Feature Engineering
+Add new features and categories based on the existing data, using functions and mappings as needed.
+
+### E. Regression Modeling
+Conduct regression analyses to predict car prices, starting with the first stage regression.
+
+### F. Second Stage Regression
+Use the predicted prices from the first stage in a second regression analysis.
+
+This code provides a foundational approach to analyzing car pricing based on various features. You can modify the features or models as needed to enhance prediction accuracy.
