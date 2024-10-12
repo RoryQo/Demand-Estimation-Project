@@ -62,6 +62,10 @@ Obtain summary statistics to understand data distribution.
 ### First Stage Regression
 Conduct a regression analysis to predict car prices based on selected features.
 
+```
+firstStageV1 = smf.ols(formula='Price ~   hp + mpg_combined + footprint + hpDist + mpg_combinedDist + footprintDist',data=df).fit(cov_type='HC1')
+```
+
 ### Second Stage Regression
 The original regression equation is estimated, replacing the endogenous variable with its predicted values from the first stage. This helps to provide a more accurate estimate of the coefficients since the endogeneity issue has been addressed.
 
