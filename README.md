@@ -3,7 +3,7 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
-3. [Data Overview](#data-overview)
+3. [Data Overview](#data-overview) 
 4. [Data Processing](#data-processing)
    - [Loading Data](#loading-data)
    - [Data Cleaning](#data-cleaning)
